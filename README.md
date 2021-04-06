@@ -1,1 +1,2 @@
 # TeamProfileGenerator
+## Table of Contents
