@@ -1,2 +1,3 @@
-const Employee = require("../../../../Javascript/homework/lib/Employee")
+const Employee = require("./lib/Employee");
+
 
