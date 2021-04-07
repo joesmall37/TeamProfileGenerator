@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/joesmall37/TeamProfileGenerator#readme",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
   }
 }
