@@ -25,7 +25,16 @@ const generateHTML = (answers) => {
     <h1> The managers's name is ${manager.name}</h1>
     <h1> The manager's id ${manager.id}</h1>
     <h1> The manager's email is ${manager.email}</h1>
-    <script src="script.js"></script>
+
+    <h1> The engineer's name is ${engineer.name}</h1>
+    <h1> The engineer's id ${engineer.id}</h1>
+    <h1> The engineer's email is ${engineer.email}</h1>
+
+     <h1> The intern's name is ${intern.name}</h1>
+    <h1> The intern's id ${intern.id}</h1>
+    <h1> The intern's email is ${intern.email}</h1>
+
+    <script src="index.js"></script>
 </body>
 </html>`
 }
