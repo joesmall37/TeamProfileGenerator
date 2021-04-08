@@ -17,9 +17,14 @@ const generateHTML = (answers) => {
     <title>Document</title>
 </head>
 <body>
-    <h1> The employee's name is ${answers.name}</h1>
-    <h1> The employee's id ${answers.id}</h1>
-    <h1> The employee's email is ${answers.email}</h1>
+    <h1> The employee's name is ${employee.name}</h1>
+    <h1> The employee's id ${employee.id}</h1>
+    <h1> The employee's email is ${employee.email}</h1>
+
+
+    <h1> The managers's name is ${manager.name}</h1>
+    <h1> The manager's id ${manager.id}</h1>
+    <h1> The manager's email is ${manager.email}</h1>
     <script src="script.js"></script>
 </body>
 </html>`
