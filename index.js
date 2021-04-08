@@ -1,6 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const internquestions = require('internquestions');
+const employeequestions = require('employeequestions');
+const engineerquestions = require('engineerquestions');
+const managerquestions = require('managerquestions');
 
 
 const generateHTML = () => {
@@ -26,29 +29,10 @@ const generateHTML = () => {
 
 inquirer
     .prompt(internquestions)
+    .prompt(engineerquestions)
+    .prompt(managerquestions)
+    .prompt(employeequestions)
     .then((data) => {
-        switch (data.license) {
-            case 'MIT':
-                data.license = licenseText.mit;
-                break;
-            case 'Unlicense':
-                data.license = licenseText.unlicense;
-                break;
-            case 'Boost':
-                data.license = licenseText.boost;
-            case 'Mozilla':
-                data.license = licenseText.mozilla;
-                break;
-            case 'Apache':
-                data.license = licenseText.apache;
-                break;
-            case 'GNU':
-                data.license = licenseText.gnu;
-                break;
-            case 'Eclipse':
-                data.license = licenseText.eclipse;
-                break;
-        }
         const filename = `index.html`;
         fs.writeFile(filename, generateHTML(data), (err) =>
             err ? console.log(err) : console.log('Success!')
