@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const questions = require('questions');
+const internquestions = require('internquestions');
 
 
 const generateHTML = () => {
@@ -25,7 +25,7 @@ const generateHTML = () => {
 }
 
 inquirer
-    .prompt(questions)
+    .prompt(internquestions)
     .then((data) => {
         switch (data.license) {
             case 'MIT':
