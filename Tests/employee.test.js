@@ -23,8 +23,8 @@ describe('Employee', () => {
             expect(employee.id).toBe(employee)
         })
         test('sets the email address of employee when set', () => {
-            const emailAddress = 'test@gmail.com';
-            const employee = new Employee("", 1, email);
+            const emailAddress = 'employee@gmail.com';
+            const employee = new Employee("", 1, emailAddress);
             expect(employee.emailAddress).toBe(emailAddress)
         })
         test()
@@ -33,6 +33,7 @@ describe('Employee', () => {
         test('returns the following statement: The name of employee is name', () => {
             // thi can be any random name
             const name = "Emily";
+            // do I Have to repeat the constructor paramaters each time?
             const employee = new Employee();
             expect(employee.name).toBe(name);
         })
