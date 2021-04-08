@@ -1,4 +1,5 @@
-const Employee = require("./lib/employee");
+const fs = require("fs");
+const Employee = require('./lib/employee.js');
 
 
 // general test
@@ -9,120 +10,56 @@ describe('Employee', () => {
             const employee = new Employee;
             expect(employee instanceof Employee).toBe(true);
         })
-// I tried to write describe for EACH test
+//----Q --- I tried to write describe for EACH test -- Q
         test('sets the name of employee when set', () => {
             const name = "John";
             const employee = new Employee(name);
             expect(employee.name).toBe(name)
         })
+        test('sets the id of employee when set', () => {
+            const id = 1;
+            const employee = new Employee("", id);
+            // ----Q---  does order matter when initializing?? --- Q
+            expect(employee.id).toBe(employee)
+        })
+        test('sets the email address of employee when set', () => {
+            const emailAddress = 'test@gmail.com';
+            const employee = new Employee("", 1, email);
+            expect(employee.emailAddress).toBe(emailAddress)
+        })
+        test()
+        })
+    describe('getEmployeeName', () => {
+        test('returns the following statement: The name of employee is name', () => {
+            // thi can be any random name
+            const name = "Emily";
+            const employee = new Employee();
+            expect(employee.name).toBe(name);
+        })
 
-})
-
-})
-
-
-
-
-
-
-// describe Employee
-describe('Employee', () => {
-  // describe Initialization
-  describe('Initialization', () => {
-    // test that it returns an object that is an instance of the Employee class when called with the new keyword
-      // call the constructor
-      // check that it is an instance of Employee
-    it('returns an object that is an instance of the Employee class when called with the new keyword', () => {
-      const employee = new Employee();
-      expect(employee instanceof Employee).toBe(true);
+    describe('getEmployeeId', () => {
+        test('returns the following statement: The id of the employee is id', () => {
+            // this can be any random number
+            const id = 0;
+            const employee = new Employee();
+            expect(employee.id).toBe(id);
+        } )
     })
-
-    // test that it sets name property based on constructor argument
-      // define a name for the test
-      // call constructor with the test name
-      // check that the resulting name property is equal to the test name
-    it('it sets the name property based on constructor argument', () => {
-      const name = "Giselle";
-      const employee = new Employee(name);
-
-      expect(employee.name).toBe(name);
-    });
-
-    // test that it sets id property based on constructor argument
-      // define an id for the test
-      // call constructor with an empty string for the name arg and the test id
-      // check that the resulting id property is equal to the test id
-    it('it sets the id property based on constructor argument', () => {
-      const id = 1;
-      const employee = new Employee("", id);
-
-      expect(employee.id).toBe(id);
-    });
-
-    // test that it sets email property based on constructor argument
-      // define an email for the test
-      // call constructor with an empty string for the name arg, any number for the id arg, and the test email
-      // check that the resulting email property is equal to the test email
-    it('it sets the email property based on constructor argument', () => {
-      const email = 'test@email.com';
-      const employee = new Employee("", 0, email);
-
-      expect(employee.email).toBe(email);
-    });
-  })
-
-  // describe getName
-  describe('getName', () => {
-    // test that it returns the name property when the getName() method is called
-      // define a name for the test
-      // call constructor with the test name
-      // call the getName() method and check that the result equals the test name
-    it('returns the name property when the getName() method is called', () => {
-      const name = "Obi";
-      const employee = new Employee(name);
-
-      expect(employee.getName()).toBe(name);
-    });
-  })
-
-  // describe getId
-  describe( 'getId', () => {
-    // test that it returns the id property when the getId() method is called
-      // define an id for the test
-      // call constructor with an empty string for the name arg and the test id
-      // call the getId() method and check that the result equals the test id
-    it('returns the id property when the getId() method is called', () => {
-      const id = 1;
-      const employee = new Employee("", id);
-
-      expect(employee.getId()).toBe(id);
-    });
-  });
-
-  // desribe getEmail
-  describe('getEmail', () => {
-    // test that it returns the email property when the getEmail() method is called
-      // define an email for the test
-      // call constructor with an empty string for the name arg, any number for the id arg, and the test email
-      // call the getEmail() method and check that the result equals the test email
-    it('returns the email property when the getEmail() method is called', () => {
-      const email = 'test@email.com';
-      const employee = new Employee("", 0, email);
-
-      expect(employee.getEmail()).toBe(email);
-    });
-  });
-
-  // decsribe getRole
-  describe('getRole', () => {
-    // test that it returns 'Employee' when the getRole() method is called
-      // define an email for the test
-      // call constructor with an empty string for the name arg, any number for the id arg, and the test email
-      // call the getName() method and check that the result equals the test email
-    it("returns 'Employee' when the getRole() method is called", () => {
-      const employee = new Employee();
-
-      expect(employee.getRole()).toBe('Employee');
-    });
-  });
-});
+    describe('getEmailAddress', () => {
+        // why am I writing two callbacks?
+        test(`return the following statement when getEmailAddress() is called: the employee's email address is email address`, ()=> {
+            const emailAddress = 'test@gmail.com';
+            // why do we have to construct the function every time?
+            const employee = new Employee();
+            expect(employee.emailAddress).toBe(emailAddress);
+        })
+    })
+    describe('getRole', () => {
+        test('return the role of the employee', () => {
+            const role = 'employee';
+            const employee = new Employee();
+            expect(employee.role).toBe(role)
+        })
+    })
+    })
+        })
