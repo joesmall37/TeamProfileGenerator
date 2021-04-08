@@ -29,6 +29,7 @@ describe('Employee', () => {
         })
         test()
         })
+        // Q - these are the same tests?
     describe('getEmployeeName', () => {
         test('returns the following statement: The name of employee is name', () => {
             // thi can be any random name
