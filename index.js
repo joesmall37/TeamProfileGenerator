@@ -1,12 +1,12 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const internquestions = require('internquestions');
-const employeequestions = require('employeequestions');
-const engineerquestions = require('engineerquestions');
-const managerquestions = require('managerquestions');
+const internquestions = require('./internquestions');
+const employeequestions = require('./employeequestions');
+const engineerquestions = require('./engineerquestions');
+const managerquestions = require('./managerquestions');
 
 
-const generateHTML = () => {
+const generateHTML = (answers) => {
     ` <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +17,9 @@ const generateHTML = () => {
     <title>Document</title>
 </head>
 <body>
-    <h1> My name is ${answers.username}</h1>
-    <h1> My location is ${answers.location}</h1>
-    <h1> My bio is ${answers.bio}</h1>
-    <h1> My linkedin is ${answers.linkedin}</h1>
-
+    <h1> The employee's name is ${answers.name}</h1>
+    <h1> The employee's id ${answers.id}</h1>
+    <h1> The employee's email is ${answers.email}</h1>
     <script src="script.js"></script>
 </body>
 </html>`
