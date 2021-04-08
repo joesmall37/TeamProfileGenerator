@@ -21,41 +21,40 @@ describe('Engineer', () => {
             const engineer = new Engineer("", 2, "test@gmail.com");
             expect(engineer.email).toBe(true)
         })
+    });
+
     describe('getRole', () => {
-        test('provides the role of the engineer in the company', () => {
-            const role = 'Engineer';
-            const engineer = new Engineer();
-            expect(engineer.role).toBe(role)
-        })
-    describe('getName', () =>{
-        test('', () => {
+            test('provides the role of the engineer in the company', () => {
+                const role = 'Engineer';
+                const engineer = new Engineer();
+                expect(engineer.role).toBe(role)
+            })
+            describe('getName', () => {
+                test('', () => {
 
-        })
+                })
+            })
 
-    })
-    })
     describe('getID', () => {
-        test('', () => {
+            test('', () => {
+
+            })
 
         })
-
-
     })
-
     describe('getEmailAddress', () => {
-        test('', () => {
+            test('', () => {
 
+            })
         })
+    describe('getRole', () => {
+                test('', () => {
 
+                })
+            })
+    describe('getGithub', () => {
+                    test('', () => {
 
-    })
-
-
-
-
-
-    })
-
-
-
-})
+                    })
+                })
+        })
