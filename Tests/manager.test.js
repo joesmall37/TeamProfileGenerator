@@ -1,4 +1,4 @@
-const manager = require('./lib/manager');
+const manager = require('../lib/manager');
 const fs = require('fs');
 
 

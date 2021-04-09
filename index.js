@@ -50,24 +50,34 @@ const initEmployee = () => {
                     })
             })
 
-            const renderHTML = () => {
-                `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="script.css">
-    <title>Document</title>
-</head>
-<body>
+        const sportsTeam = {
+            name: "Jane Doe",
+            number: 90,
+            email: "jdoe@email.com",
+            position: 'forward'
+        }
+        const htmlStr = writeHTML(sportsTeam.name, sportsTeam.number, sportsTeam.position)
+        fs.writeFile('team.html', htmlStr, (err, res) => {
+            if (err) { console.log(err) }
+            else { console.log('success!') }
+        })
 
-</body>
-</html>`
-            }
 
-         const editedHTML = () => {
-                ``
-            }
+        const writeHTML = (name, number, position) => {
+            const htmlStr = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+        <h1>${name} is number ${number}. They play as a ${position}</h1>
+        </body>
+        </html>
+`
+            return htmlStr;
+        }
+    ]

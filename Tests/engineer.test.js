@@ -1,4 +1,4 @@
-const Engineer = require('./lib/engineer');
+const Engineer = require('../lib/engineer');
 const fs = require = ('fs');
 
 // should we test to see if the inheritence worked?

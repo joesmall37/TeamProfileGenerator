@@ -1,5 +1,4 @@
-const intern = require('./lib/intern');
-const fs = require('fs');
+const intern = require('../lib/intern.js');
 
 // general test
 describe('Intern', () => {

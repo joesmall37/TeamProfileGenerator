@@ -1,5 +1,5 @@
 const fs = require("fs");
-const Employee = require('./lib/employee.js');
+const Employee = require('../lib/employee.js');
 
 
 // general test
@@ -12,7 +12,7 @@ describe('Employee', () => {
         })
 //----Q --- I tried to write describe for EACH test -- Q
         test('sets the name of employee when set', () => {
-            const name = "John";
+            const name = "Emily";
             const employee = new Employee(name);
             expect(employee.name).toBe(name)
         })
@@ -20,7 +20,7 @@ describe('Employee', () => {
             const id = 1;
             const employee = new Employee("", id);
             // ----Q---  does order matter when initializing?? --- Q
-            expect(employee.id).toBe(employee)
+            expect(employee.id).toBe(id)
         })
         test('sets the email address of employee when set', () => {
             const emailAddress = 'employee@gmail.com';
@@ -35,7 +35,7 @@ describe('Employee', () => {
             // thi can be any random name
             const name = "Emily";
             // do I Have to repeat the constructor paramaters each time?
-            const employee = new Employee();
+            const employee = new Employee(name);
             expect(employee.name).toBe(name);
         })
 
@@ -43,7 +43,7 @@ describe('Employee', () => {
         test('returns the following statement: The id of the employee is id', () => {
             // this can be any random number
             const id = 0;
-            const employee = new Employee();
+            const employee = new Employee(id);
             expect(employee.id).toBe(id);
         } )
     })
@@ -52,15 +52,15 @@ describe('Employee', () => {
         test(`return the following statement when getEmailAddress() is called: the employee's email address is email address`, ()=> {
             const emailAddress = 'test@gmail.com';
             // why do we have to construct the function every time?
-            const employee = new Employee();
-            expect(employee.emailAddress).toBe(emailAddress);
+            const employee = new Employee('emily', 1, emailAddress);
+            expect(employee.getEmail()).toBe(emailAddress);
         })
     })
     describe('getRole', () => {
         test('return the role of the employee', () => {
-            const role = 'employee';
-            const employee = new Employee();
-            expect(employee.role).toBe(role)
+            const role = 'Employee';
+            const employee = new Employee('emily', 1 , 'test@gmail.com');
+            expect(employee.getRole()).toBe(role)
         })
     })
     })
