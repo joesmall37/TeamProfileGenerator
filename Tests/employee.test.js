@@ -17,9 +17,8 @@ describe('Employee', () => {
             expect(employee.name).toBe(name)
         })
         test('sets the id of employee when set', () => {
-            const id = 1;
+            const id = '1';
             const employee = new Employee("", id);
-            // ----Q---  does order matter when initializing?? --- Q
             expect(employee.id).toBe(id)
         })
         test('sets the email address of employee when set', () => {
@@ -27,7 +26,6 @@ describe('Employee', () => {
             const employee = new Employee("", 1, emailAddress);
             expect(employee.emailAddress).toBe(emailAddress)
         })
-        test()
         })
         // Q - these are the same tests?
     describe('getEmployeeName', () => {
@@ -42,9 +40,9 @@ describe('Employee', () => {
     describe('getEmployeeId', () => {
         test('returns the following statement: The id of the employee is id', () => {
             // this can be any random number
-            const id = 0;
+            const id = '0';
             const employee = new Employee(id);
-            expect(employee.id).toBe(id);
+            expect(employee.getId()).toBe(id);
         } )
     })
     describe('getEmailAddress', () => {
