@@ -5,10 +5,12 @@ module.exports = [
         message: 'Enter the name of the employee',
     },
     {
+        type: 'input',
         message: 'Enter the employee id number of the employee',
         name: 'id'
     },
     {
+        type: 'input',
         message: 'Enter the email address of the employeee',
         name: 'email'
     },
