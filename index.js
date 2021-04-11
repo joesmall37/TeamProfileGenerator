@@ -18,7 +18,7 @@ function addMember() {
     },
     {
         type: "list",
-        message: "Select team member's role",
+        message: "Enter team member's role",
         choices: [
             "Engineer",
             "Intern",
@@ -27,7 +27,7 @@ function addMember() {
         name: "role"
     },
     {
-        message: "Enter team member's id",
+        message: "Enter team member's employee id",
         name: "id"
     },
     {
@@ -41,7 +41,7 @@ function addMember() {
             } else if (role === "Intern") {
                 roleInfo = "school name";
             } else {
-                roleInfo = "office phone number";
+                roleInfo = "office number";
             }
             inquirer.prompt([{
                 message: `Enter team member's ${roleInfo}`,
@@ -137,14 +137,14 @@ function addHtml(member) {
             </div>
         </div>`;
         } else {
-            const officePhone = member.getOfficeNumber();
+            const officeNumber = member.getOfficeNumber();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
             <h5 class="card-header">${name}<br /><br />Manager</h5>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">Email Address: ${email}</li>
-                <li class="list-group-item">Office Phone: ${officePhone}</li>
+                <li class="list-group-item">Office Number: ${officeNumber}</li>
             </ul>
             </div>
         </div>`
