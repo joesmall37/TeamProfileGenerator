@@ -7,11 +7,11 @@ const Manager = require("./lib/manager");
 const employees = [];
 
 function initApp() {
-    startHtml();
-    addMember();
+    initHtml();
+    addEmployee();
 }
 
-function addMember() {
+const addEmployee = () => {
     inquirer.prompt([{
         message: "Enter team member's name",
         name: "name"
@@ -80,7 +80,7 @@ function addMember() {
 }
 
 
-function startHtml() {
+const initHtml = () => {
     const html = `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -89,7 +89,7 @@ function startHtml() {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <title>Team Profile</title>
+        <title>Team Info</title>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark mb-5">
@@ -105,7 +105,7 @@ function startHtml() {
     console.log("start");
 }
 
-function addHtml(member) {
+const addHtml = (member) =>{
     return new Promise(function (resolve, reject) {
         const name = member.getEmployeeName();
         const role = member.getRole();
@@ -162,7 +162,7 @@ function addHtml(member) {
 
 }
 
-function finishHtml() {
+const finishHtml =  () =>{
     const html = ` </div>
     </div>
 

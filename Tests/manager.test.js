@@ -4,10 +4,10 @@ const Manager = require('../lib/manager');
 describe('Manager', () => {
     describe('Initialize office number of manager', () => {
         test('set office number of the manager', () => {
-            const officeNum = 235;
-            const manager = new Manager("", 1, "john@gmail.com", officeNum);
-            expect(manager.officeNum.toBe(officeNum)
-            )
+            const officeNumber = '235';
+            const manager = new Manager("", 1, "john@gmail.com", officeNumber);
+            expect(manager.officeNumber).toBe(officeNumber)
+        })
         })
         describe('getOffice num', () => {
             test('return the office number of the manager', () => {
@@ -23,5 +23,4 @@ describe('Manager', () => {
             expect(manager.getRole()).toBe(role)
         })
     })
-})
 })

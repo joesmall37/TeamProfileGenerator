@@ -15,11 +15,11 @@ describe('Employee', () => {
             const name = "Emily";
             const employee = new Employee(name);
             expect(employee.name).toBe(name)
-        })
+        });
         test('sets the id of employee when set', () => {
-            const id = '1';
-            const employee = new Employee("", id);
-            expect(employee.id).toBe(id)
+            const employeeId = '1';
+            const employee = new Employee("", employeeId);
+            expect(employee.employeeId).toBe(employeeId)
         })
         test('sets the email address of employee when set', () => {
             const emailAddress = 'employee@gmail.com';
