@@ -3,14 +3,12 @@ const fs = require("fs");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Manager = require("./lib/manager");
-
 const employees = [];
 
-function initApp() {
+const initApp = () => {
     initHtml();
     addEmployee();
 }
-
 const addEmployee = () => {
     inquirer.prompt([{
         message: "Enter team member's name",
@@ -69,7 +67,7 @@ const addEmployee = () => {
                     addHtml(newMember)
                         .then(function () {
                             if (moreMembers === "yes") {
-                                addMember();
+                                addEmployee();
                             } else {
                                 finishHtml();
                             }
@@ -78,8 +76,6 @@ const addEmployee = () => {
                 });
         });
 }
-
-
 const initHtml = () => {
     const html = `<!DOCTYPE html>
     <html lang="en">
@@ -102,9 +98,7 @@ const initHtml = () => {
             console.log(err);
         }
     });
-    console.log("start");
 }
-
 const addHtml = (member) =>{
     return new Promise(function (resolve, reject) {
         const name = member.getEmployeeName();
@@ -149,7 +143,6 @@ const addHtml = (member) =>{
             </div>
         </div>`
         }
-        console.log("adding team member");
         fs.appendFile("./dist/index.html", data, function (err) {
             if (err) {
                 return reject(err);
@@ -157,11 +150,7 @@ const addHtml = (member) =>{
             return resolve();
         });
     });
-
-
-
 }
-
 const finishHtml =  () =>{
     const html = ` </div>
     </div>
@@ -174,8 +163,5 @@ const finishHtml =  () =>{
             console.log(err);
         };
     });
-    console.log("end");
 }
-
-
 initApp();
