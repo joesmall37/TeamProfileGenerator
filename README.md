@@ -30,7 +30,7 @@
  
 ## Deployed Application
   - [Link to video demo of application](https://drive.google.com/file/d/1Uc0dC-5IuH3JQpTzoK2Mluz8YS2VSEdG/view)
-- ![image](https://user-images.githubusercontent.com/63420051/114327597-b34a4f00-9b07-11eb-837e-83bbfa6f1fc4.png))
+- ![image](https://user-images.githubusercontent.com/63420051/114327597-b34a4f00-9b07-11eb-837e-83bbfa6f1fc4.png)
 ## Contribution 
   - Joseph Small
 ## License 
